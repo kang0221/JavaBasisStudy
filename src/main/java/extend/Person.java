@@ -22,7 +22,10 @@ public class Person implements Comparable, Serializable {
     public String age;
     String sex;
 
-    public void getName() {
+    public String getName() {
+        return name;
+    }
+    public void setName() {
         System.out.println("pname");
     }
     public String getAge() {
@@ -37,14 +40,14 @@ public class Person implements Comparable, Serializable {
 
     public static List<Person> getPersons() {
         List<Person> list = new ArrayList<>();
-        list.add(new Person("a", "24", "男"));
         list.add(new Person("b", "23", "女"));
-        list.add(new Person("c", "22", "男"));
-        list.add(new Person("d", "21", "女"));
-        list.add(new Person("e", "20", "男"));
-        list.add(new Person("f", "21", "女"));
-        list.add(new Person("g", "22", "男"));
         list.add(new Person("h", "24", "男"));
+        list.add(new Person("a", "24", "男"));
+        list.add(new Person("f", "21", "女"));
+        list.add(new Person("d", "21", "女"));
+        list.add(new Person("g", "22", "男"));
+        list.add(new Person("e", "20", "男"));
+        list.add(new Person("c", "22", "男"));
         return list;
     }
     @Override

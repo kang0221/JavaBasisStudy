@@ -20,9 +20,15 @@ public class StreamTest {
     @Test
     public void test1() {
         List<Person> list = Person.getPersons();
-        Stream<Person> stream = list.stream();
-        stream.filter(s -> {
-            return Integer.valueOf(s.getAge()) > 22;
-        }).forEach(System.out::println);
+        list.stream().filter(s -> Integer.valueOf(s.getAge()) > 22).forEach(System.out::println);
+        list.stream().limit(3).forEach(System.out::println);
+        list.stream().skip(3).forEach(System.out::println);
+        list.stream().sorted().forEach(System.out::println);
+    }
+
+    @Test
+    public void test2() {
+        List<Person> list = Person.getPersons();
+        list.stream().limit(3).map(Person::getName).forEach(System.out::println);
     }
 }
