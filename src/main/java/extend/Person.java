@@ -20,6 +20,7 @@ public class Person implements Comparable, Serializable {
     public static final long serialVersionUID = 12343256123634L;
     public String name = "p";
     public String age;
+    public double salary;
     String sex;
 
     public String getName() {
@@ -36,6 +37,14 @@ public class Person implements Comparable, Serializable {
         this.name = name;
         this.age = age;
         this.sex = sex;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
     public static List<Person> getPersons() {
